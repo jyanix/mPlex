@@ -42,3 +42,9 @@ sudo apt-get install dnsmasq hostapd
 sudo systemctl stop dnsmasq
 sudo systemctl stop hostapd
 
+# Make the Syncthing init.d script executable
+sudo chmod +x /etc/init.d/syncthing
+# Set Syncthing to start on boot
+sudo update-rc.d syncthing defaults
+# Now you can start Syncthing like this
+sudo service syncthing start
