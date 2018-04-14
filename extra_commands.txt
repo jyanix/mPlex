@@ -1,0 +1,12 @@
+# CPU core temperature:
+vcgencmd measure_temp
+
+# internal voltages for core, sdram_c, sdram_i, and sdram_p
+for id in core sdram_c sdram_i sdram_p ; do \
+echo -e "$id:\t$(vcgencmd measure_volts $id)" ; \
+done
+
+# hardware codecs have been enabled
+for codec in H264 MPG2 WVC1 MPG4 MJPG WMV9 ; do \
+echo -e "$codec:\t$(vcgencmd codec_enabled $codec)" ; \
+done
