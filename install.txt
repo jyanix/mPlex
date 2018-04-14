@@ -1,0 +1,44 @@
+# OSX: Raspbian install
+diskutil list
+sudo diskutil unmountDisk /dev/disk<disk# from diskutil>
+sudo dd bs=1m if=<path><img file> of=/dev/rdisk<disk# from diskutil> conv=sync
+
+
+# Boot raspbian
+sudo apt-get update
+sudo apt-get upgrade
+
+# raspi-config for SSH, locale, etc.
+sudo raspi-config
+
+# start plex install
+sudo su
+wget -O - https://dev2day.de/pms/dev2day-pms.gpg.key | apt-key add -
+echo "deb [arch=armhf] https://dev2day.de/pms/ stretch main" >> /etc/apt/sources.list.d/pms.list
+apt-get install apt-transport-https
+dpkg --add-architecture armhf 
+apt-get update
+apt-get install plexmediaserver-installer:armhf 
+
+# install exFAT support (macOS and linux cross compatibility for over 32GB drives)
+sudo apt-get install exfat-fuse exfat-utils
+
+# plug in any USB drives you plan on using for storage
+
+# get UUID
+sudo blkid
+
+# modify fstab
+UUID=<UUID> <mount location> exfat defaults,auto,umask=000,users,rw 0 0
+
+sudo mkdir <path_to_mount_external_drive>
+
+sudo mount -a
+
+# configure wifi
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install dnsmasq hostapd
+sudo systemctl stop dnsmasq
+sudo systemctl stop hostapd
+
