@@ -42,6 +42,30 @@ sudo apt-get install dnsmasq hostapd
 sudo systemctl stop dnsmasq
 sudo systemctl stop hostapd
 
+## Install Syncthing on Raspbian
+# Add the release PGP keys:
+curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
+
+# Add the "stable" channel to your APT sources:
+echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
+
+# Update and install syncthing:
+sudo apt-get update
+sudo apt-get install syncthing
+
+## start syncthing to create default config file
+syncthing
+
+
+# Edit the Syncthing configuration file
+
+nano /home/pi/.config/syncthing/config.xml
+# Change this line from the local loopback 127.0.0.1 to the any address code 0.0.0.0
+# Change tls to true if you want an SSL connection for the Syncthing web interface
+# <gui enabled="true" tls="false">
+#  <address>0.0.0.0:8384</address>
+ 
+ 
 # Make the Syncthing init.d script executable
 sudo chmod +x /etc/init.d/syncthing
 # Set Syncthing to start on boot
