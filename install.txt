@@ -3,7 +3,7 @@ diskutil list
 sudo diskutil unmountDisk /dev/disk<disk# from diskutil>
 sudo dd bs=1m if=<path><img file> of=/dev/rdisk<disk# from diskutil> conv=sync
 
-
+####################
 # Boot raspbian
 sudo apt-get update
 sudo apt-get upgrade
@@ -42,6 +42,7 @@ sudo apt-get install dnsmasq hostapd
 sudo systemctl stop dnsmasq
 sudo systemctl stop hostapd
 
+####################
 ## Install Syncthing on Raspbian
 # Add the release PGP keys:
 curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
