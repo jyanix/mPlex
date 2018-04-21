@@ -78,9 +78,9 @@
 ### Edit the Syncthing configuration file
 
 `nano /home/pi/.config/syncthing/config.xml`
-_Change this line from the local loopback 127.0.0.1 to the any address code 0.0.0.0_
+##### Change this line from the local loopback 127.0.0.1 to the any address code 0.0.0.0
 ##### Change tls to true if you want an SSL connection for the Syncthing web interface
-`<gui enabled="true" tls="false">`
+`<gui enabled="true" tls="false">`  
 `<address>0.0.0.0:8384</address>`
  
  
