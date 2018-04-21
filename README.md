@@ -104,21 +104,20 @@ sudo service syncthing start
 ############################################################
 ## Install Power Button
 
-
 sudo nano listen-for-shutdown.py
-### copy/paste in listen-for-shutdown.py
+## copy/paste in listen-for-shutdown.py
 sudo mv listen-for-shutdown.py /usr/local/bin/
 sudo chmod +x /usr/local/bin/listen-for-shutdown.py
 
 sudo nano listen-for-shutdown.sh
-### copy/paste in listen-for-shutdown.sh 
+## copy/paste in listen-for-shutdown.sh 
 sudo mv listen-for-shutdown.sh /etc/init.d/
 sudo chmod +x /etc/init.d/listen-for-shutdown.sh
 
-### register script to run on boot
+## register script to run on boot
 sudo update-rc.d listen-for-shutdown.sh defaults
 
-#### start script as it won't be running
+## start script as it won't be running
 sudo /etc/init.d/listen-for-shutdown.sh start
 
 
