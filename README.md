@@ -16,7 +16,7 @@
 ## OSX: Raspbian install
 `diskutil list`  
 `sudo diskutil unmountDisk /dev/disk_<disk# from diskutil>_`  
-`sudo dd bs=1m if=_<path><img file>_ of=/dev/rdisk_<disk# from diskutil>_ conv=sync`
+`sudo dd bs=1m if=<path><img file> of=/dev/rdisk<disk# from diskutil> conv=sync`
 
 ############################################################
 ## Boot raspbian
@@ -45,7 +45,7 @@
 
 ### modify fstab
 `UUID=_<UUID> <mount location>_ exfat defaults,auto,umask=000,users,rw 0 0`  
-`sudo mkdir _<path_to_mount_external_drive>_`  
+`sudo mkdir <path_to_mount_external_drive>`  
 `sudo mount -a`
 
 ### configure wifi
@@ -78,10 +78,10 @@
 ### Edit the Syncthing configuration file
 
 `nano /home/pi/.config/syncthing/config.xml`
-#### Change this line from the local loopback 127.0.0.1 to the any address code 0.0.0.0
-#### Change tls to true if you want an SSL connection for the Syncthing web interface
-#### <gui enabled="true" tls="false">
-#### #<address>0.0.0.0:8384</address>
+_Change this line from the local loopback 127.0.0.1 to the any address code 0.0.0.0_
+##### Change tls to true if you want an SSL connection for the Syncthing web interface
+`<gui enabled="true" tls="false">`
+`<address>0.0.0.0:8384</address>`
  
  
 #### Make the Syncthing init.d script executable
@@ -95,19 +95,20 @@
 ## Install Power Button
 
 `sudo nano listen-for-shutdown.py`
-## copy/paste in listen-for-shutdown.py
+#### copy/paste in listen-for-shutdown.py
 `sudo mv listen-for-shutdown.py /usr/local/bin/`  
 `sudo chmod +x /usr/local/bin/listen-for-shutdown.py`
 
+
 `sudo nano listen-for-shutdown.sh`
-## copy/paste in listen-for-shutdown.sh 
+#### copy/paste in listen-for-shutdown.sh 
 `sudo mv listen-for-shutdown.sh /etc/init.d/`  
 `sudo chmod +x /etc/init.d/listen-for-shutdown.sh`
 
-## register script to run on boot
+#### register script to run on boot
 `sudo update-rc.d listen-for-shutdown.sh defaults`
 
-## start script as it won't be running
+#### start script as it won't be running
 `sudo /etc/init.d/listen-for-shutdown.sh start`
 
 
