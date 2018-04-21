@@ -1,0 +1,33 @@
+
+v1.4
+ - power button
+ - plexmediaserver v1.12.3.4973
+ - kernel: 4.14.34-v7+
+
+v1.3
+ - syncthing
+ - sync via ethernet
+ - plexmediaserver v1.12.2.4929
+
+v1.2
+ - enabled 802.11ac
+ - kernel: 4.14.31-v7+
+ 
+v1.1
+ - enabled 802.11n
+ - enabled 40MHz channels with 20ns guard interval
+ - switched to AES instead of TKIP
+ - kernel: 4.14.30-v7+
+ 
+v1.0 - 
+ - Initial build
+ - 802.11g
+ - No internet passthrough
+ - Manual file sync
+ - kernel: 4.9.80-v7+
+ 
+ 
+ 
+ 
+ 
+ 
