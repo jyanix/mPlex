@@ -14,8 +14,8 @@
 
 ############################################################
 ## OSX: Raspbian install
-`diskutil list`
-`sudo diskutil unmountDisk /dev/disk_<disk# from diskutil>_`
+`diskutil list`  
+`sudo diskutil unmountDisk /dev/disk_<disk# from diskutil>_`  
 `sudo dd bs=1m if=_<path><img file>_ of=/dev/rdisk_<disk# from diskutil>_ conv=sync`
 
 ############################################################
@@ -27,12 +27,12 @@
 `sudo raspi-config`
 
 ### start plex install
-`sudo su`
-`wget -O - https://dev2day.de/pms/dev2day-pms.gpg.key | apt-key add -`
-`echo "deb [arch=armhf] https://dev2day.de/pms/ stretch main" >> /etc/apt/sources.list.d/pms.list`
-`apt-get install apt-transport-https`
-`dpkg --add-architecture armhf`
-`apt-get update`
+`sudo su`  
+`wget -O - https://dev2day.de/pms/dev2day-pms.gpg.key | apt-key add -`  
+`echo "deb [arch=armhf] https://dev2day.de/pms/ stretch main" >> /etc/apt/sources.list.d/pms.list`  
+`apt-get install apt-transport-https`  
+`dpkg --add-architecture armhf`  
+`apt-get update`  
 `apt-get install plexmediaserver-installer:armhf`
 
 ### install exFAT support (macOS and linux cross compatibility for over 32GB drives)
@@ -44,18 +44,16 @@
 `sudo blkid`
 
 ### modify fstab
-`UUID=_<UUID> <mount location>_ exfat defaults,auto,umask=000,users,rw 0 0`
-
-`sudo mkdir _<path_to_mount_external_drive>_`
-
+`UUID=_<UUID> <mount location>_ exfat defaults,auto,umask=000,users,rw 0 0`  
+`sudo mkdir _<path_to_mount_external_drive>_`  
 `sudo mount -a`
 
 ### configure wifi
-`sudo apt-get update`
-`sudo apt-get upgrade`
-`sudo apt-get install dnsmasq hostapd`
-`sudo systemctl stop dnsmasq`
-`sudo systemctl stop hostapd`
+`sudo apt-get update`  
+`sudo apt-get upgrade`  
+`sudo apt-get install dnsmasq hostapd`  
+`sudo systemctl stop dnsmasq`  
+`sudo systemctl stop hostapd`  
 
 ### copy dnsmasq.conf into /etc/dnsmasq.d/
 
@@ -98,12 +96,12 @@
 
 `sudo nano listen-for-shutdown.py`
 ## copy/paste in listen-for-shutdown.py
-`sudo mv listen-for-shutdown.py /usr/local/bin/`
+`sudo mv listen-for-shutdown.py /usr/local/bin/`  
 `sudo chmod +x /usr/local/bin/listen-for-shutdown.py`
 
 `sudo nano listen-for-shutdown.sh`
 ## copy/paste in listen-for-shutdown.sh 
-`sudo mv listen-for-shutdown.sh /etc/init.d/`
+`sudo mv listen-for-shutdown.sh /etc/init.d/`  
 `sudo chmod +x /etc/init.d/listen-for-shutdown.sh`
 
 ## register script to run on boot
