@@ -7,7 +7,7 @@
 * SanDisk 64GB MicroSDHC Flash Memory (2)
 * Rocketek Aluminum USB 3.0 Portable Memory Card Reader Adapter (2)
 * 1.5ft USB A/MicroB 28/24 AWG Cable
-* Monk Makes Squid Switch for Raspberry Pi
+* Monk Makes Squid Switch for Raspberry Pi (BARELY FITS IN CASE)
 * RAVPower RP-PB19 16750mAh 5V/2.4A
 
 
