@@ -1,9 +1,10 @@
-<<<<<<< HEAD:changelog
+versions
+
+v1.4.2
+ - syncthing v0.14.47
+ 
 v1.4.1
  - fixed folder paths
-=======
-Version History:
->>>>>>> 7107df389b070c2a18cd071815b9713dd328bf61:versions
 
 v1.4
  - power button
