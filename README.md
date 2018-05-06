@@ -43,7 +43,7 @@
 ### get UUID
 `sudo blkid`
 
-### modify fstab
+### modify /etc/fstab
 `UUID=_<UUID> <mount location>_ exfat defaults,auto,umask=000,users,rw 0 0`  
 `sudo mkdir <path_to_mount_external_drive>`  
 `sudo mount -a`
@@ -110,12 +110,3 @@
 
 #### start script as it won't be running
 `sudo /etc/init.d/listen-for-shutdown.sh start`
-
-
-
-
-
-
-
-
-
