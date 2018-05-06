@@ -45,8 +45,9 @@
 
 ### modify /etc/fstab
 `UUID=_<UUID> <mount location>_ exfat defaults,auto,umask=000,users,rw 0 0`  
-`sudo mkdir <path_to_mount_external_drive>`  
-`sudo mount -a`
+
+#### sudo mkdir <path_to_mount_external_drive>  
+#### sudo mount -a
 
 ### configure wifi
 `sudo apt-get update`  
