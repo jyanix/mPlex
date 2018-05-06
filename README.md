@@ -46,7 +46,7 @@
 ### modify /etc/fstab to automount storage
 `UUID=_<UUID> <mount location>_ exfat defaults,auto,umask=000,users,rw 0 0`  
 
-#### create mountpoint and mount storage
+### create mountpoint and mount storage
 `sudo mkdir <path_to_mount_external_drive>`
 `sudo mount -a`
 
