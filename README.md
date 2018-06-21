@@ -57,9 +57,6 @@
 `sudo systemctl stop dnsmasq`  
 `sudo systemctl stop hostapd`  
 
-### copy dnsmasq.conf into /etc/dnsmasq.d/
-
-### copy hostapd.conf into /etc/hostapd/
 
 ############################################################
 ## Install Syncthing on Raspbian
