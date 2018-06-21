@@ -16,7 +16,7 @@
 # Debian provides some extra functions though
 . /lib/lsb/init-functions
  
- 
+
 DAEMON_NAME="syncthing"
 DAEMON_USER=pi
 DAEMON_PATH="/usr/bin/syncthing"

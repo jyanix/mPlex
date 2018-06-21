@@ -1,5 +1,9 @@
 versions
 
+v1.4.3
+ - plexmediaserver v1.13.2.5144
+ - syncthing v0.14.48
+
 v1.4.2
  - syncthing v0.14.47
  
