@@ -4,8 +4,8 @@
 * Aluminum Heat Sink for Raspberry Pi 3 - 15 x 15 x 15mm
 * Raspberry Pi Case - Smoke Base (w/ Clear Top)
 * SanDisk 16GB MicroSDHC Flash Memory Card
-* SanDisk 64GB MicroSDHC Flash Memory (2)
-* Rocketek Aluminum USB 3.0 Portable Memory Card Reader Adapter (2)
+* SanDisk 200GB MicroSDHC Flash Memory
+* Rocketek Aluminum USB 3.0 Portable Memory Card Reader Adapter
 * 1.5ft USB A/MicroB 28/24 AWG Cable
 * Monk Makes Squid Switch for Raspberry Pi (BARELY FITS IN CASE)
 * RAVPower RP-PB19 16750mAh 5V/2.4A
@@ -96,15 +96,9 @@
 ############################################################
 ## Install Power Button
 
-`sudo nano listen-for-shutdown.py`
-#### copy/paste in listen-for-shutdown.py
-`sudo mv listen-for-shutdown.py /usr/local/bin/`  
+ 
 `sudo chmod +x /usr/local/bin/listen-for-shutdown.py`
 
-
-`sudo nano listen-for-shutdown.sh`
-#### copy/paste in listen-for-shutdown.sh 
-`sudo mv listen-for-shutdown.sh /etc/init.d/`  
 `sudo chmod +x /etc/init.d/listen-for-shutdown.sh`
 
 #### register script to run on boot
