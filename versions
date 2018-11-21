@@ -1,5 +1,9 @@
 versions
 
+v1.4.6
+- plexmediaserver v1.13.9.5456
+- syncthing v0.14.52
+
 v1.4.5
  - kernel: 4.14.52-v7+
 
